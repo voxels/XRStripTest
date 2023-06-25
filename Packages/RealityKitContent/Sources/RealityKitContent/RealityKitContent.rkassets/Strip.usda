@@ -1,0 +1,1514 @@
+#usda 1.0
+(
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root"
+{
+    reorder nameChildren = ["Strip", "LEDMaterial"]
+    def Material "LEDMaterial"
+    {
+        color3f inputs:EColor = (1, 0, 0) (
+            colorSpace = "Input - Texture - sRGB - Display P3"
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (-448.02344, 53.585938)
+                    float2 sizeInSubgraph = (133, 53)
+                }
+            }
+        )
+        float3 inputs:HSVAdjustment = (0, 1, 1) (
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (-390.3047, 164.9375)
+                    float2 sizeInSubgraph = (165.5, 53)
+                }
+            }
+        )
+        token outputs:mtlx:surface.connect = </Root/LEDMaterial/MaterialXPreviewSurface.outputs:out>
+        token outputs:realitykit:vertex
+        float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (358.25, 99.5)
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+
+        def Shader "MaterialXPreviewSurface"
+        {
+            uniform token info:id = "ND_UsdPreviewSurface_surfaceshader"
+            float inputs:clearcoat
+            float inputs:clearcoatRoughness
+            color3f inputs:emissiveColor.connect = </Root/LEDMaterial/HSVAdjust.outputs:out>
+            float inputs:ior
+            float inputs:metallic = 0.5
+            float inputs:occlusion
+            float inputs:roughness = 0
+            token outputs:out
+            float2 ui:nodegraph:node:pos = (103.75, 99.5)
+            float2 ui:nodegraph:node:size = (207.5, 307)
+            int ui:nodegraph:node:stackingOrder = 6
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["Advanced"]
+        }
+
+        def Shader "HSVAdjust"
+        {
+            uniform token info:id = "ND_hsvadjust_color3"
+            float3 inputs:amount.connect = </Root/LEDMaterial.inputs:HSVAdjustment>
+            color3f inputs:in.connect = </Root/LEDMaterial.inputs:EColor>
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-186.84375, 98.01953)
+            float2 ui:nodegraph:node:size = (118, 127)
+            int ui:nodegraph:node:stackingOrder = 37
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:amount"]
+        }
+    }
+
+    def "LEDMaterial_1" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+        color3f inputs:EColor (
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (-185.32812, 118.57031)
+                    float2 sizeInSubgraph = (133, 53)
+                    int stackingOrderInSubgraph = 2
+                }
+            }
+        )
+        float3 inputs:HSVAdjustment (
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (-390.3047, 164.9375)
+                    float2 sizeInSubgraph = (165.5, 53)
+                }
+            }
+        )
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+    }
+
+    def "LEDMaterial_2" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "LEDMaterial_3" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "LEDMaterial_4" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "LEDMaterial_5" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "LEDMaterial_6" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "LEDMaterial_7" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "LEDMaterial_8" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "LEDMaterial_9" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "LEDMaterial_10" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "LEDMaterial_11" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "LEDMaterial_12" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "LEDMaterial_13" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "LEDMaterial_14" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "LEDMaterial_15" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "LEDMaterial_16" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "LEDMaterial_17" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "LEDMaterial_18" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "LEDMaterial_19" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "LEDMaterial_20" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "LEDMaterial_21" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "LEDMaterial_22" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "LEDMaterial_23" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "LEDMaterial_24" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "LEDMaterial_25" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "LEDMaterial_26" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "LEDMaterial_27" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "LEDMaterial_28" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "LEDMaterial_29" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "LEDMaterial_30" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "LEDMaterial_31" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "LEDMaterial_32" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "LEDMaterial_33" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "LEDMaterial_34" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "LEDMaterial_35" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "LEDMaterial_36" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "LEDMaterial_37" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "LEDMaterial_38" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "LEDMaterial_39" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "LEDMaterial_40" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "LEDMaterial_41" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "LEDMaterial_42" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "LEDMaterial_43" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "LEDMaterial_44" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "LEDMaterial_45" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "LEDMaterial_46" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "LEDMaterial_47" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "LEDMaterial_48" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "LEDMaterial_49" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "LEDMaterial_50" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "LEDMaterial_51" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "LEDMaterial_52" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "LEDMaterial_53" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "LEDMaterial_54" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "LEDMaterial_55" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "LEDMaterial_56" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "LEDMaterial_57" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "LEDMaterial_58" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "LEDMaterial_59" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "LEDMaterial_60" (
+        active = true
+        instanceable = true
+        references = </Root/LEDMaterial>
+    )
+    {
+    }
+
+    def "Strip" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (1.5707963, 0, 1.5707965)
+        }
+        references = @strip.usdz@
+    )
+    {
+        quatf xformOp:orient = (0.5, 0.49999994, 0.5, 0.50000006)
+        float3 xformOp:scale = (1, 1, 1)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "Materials"
+        {
+            over "LM_002" (
+                active = false
+            )
+            {
+                token outputs:mtlx:surface
+                token outputs:realitykit:vertex
+            }
+
+            over "LM_003" (
+                active = false
+            )
+            {
+            }
+
+            over "LM_004" (
+                active = false
+            )
+            {
+            }
+
+            over "LM_005" (
+                active = false
+            )
+            {
+            }
+
+            over "LM_006" (
+                active = false
+            )
+            {
+            }
+
+            over "LM_007" (
+                active = false
+            )
+            {
+            }
+
+            over "LM_008" (
+                active = false
+            )
+            {
+            }
+
+            over "LM_009" (
+                active = false
+            )
+            {
+            }
+
+            over "LM_010" (
+                active = false
+            )
+            {
+            }
+
+            over "LM_011" (
+                active = false
+            )
+            {
+            }
+
+            over "LM_012" (
+                active = false
+            )
+            {
+            }
+
+            over "LM_013" (
+                active = false
+            )
+            {
+            }
+
+            over "LM_014" (
+                active = false
+            )
+            {
+            }
+
+            over "LM_015" (
+                active = false
+            )
+            {
+            }
+
+            over "LM_016" (
+                active = false
+            )
+            {
+            }
+
+            over "LM_017" (
+                active = false
+            )
+            {
+            }
+
+            over "LM_018" (
+                active = false
+            )
+            {
+            }
+
+            over "LM_019" (
+                active = false
+            )
+            {
+            }
+
+            over "LM_020" (
+                active = false
+            )
+            {
+            }
+
+            over "LM_021" (
+                active = false
+            )
+            {
+            }
+
+            over "LM_022" (
+                active = false
+            )
+            {
+            }
+
+            over "LM_023" (
+                active = false
+            )
+            {
+            }
+
+            over "LM_024" (
+                active = false
+            )
+            {
+            }
+
+            over "LM_025" (
+                active = false
+            )
+            {
+            }
+
+            over "LM_026" (
+                active = false
+            )
+            {
+            }
+
+            over "LM_027" (
+                active = false
+            )
+            {
+            }
+
+            over "LM_028" (
+                active = false
+            )
+            {
+            }
+
+            over "LM_029" (
+                active = false
+            )
+            {
+            }
+
+            over "LM_030" (
+                active = false
+            )
+            {
+            }
+
+            over "LM_031" (
+                active = false
+            )
+            {
+            }
+
+            over "LM_032" (
+                active = false
+            )
+            {
+            }
+
+            over "LM_033" (
+                active = false
+            )
+            {
+            }
+
+            over "LM_034" (
+                active = false
+            )
+            {
+            }
+
+            over "LM_035" (
+                active = false
+            )
+            {
+            }
+
+            over "LM_036" (
+                active = false
+            )
+            {
+            }
+
+            over "LM_037" (
+                active = false
+            )
+            {
+            }
+
+            over "LM_038" (
+                active = false
+            )
+            {
+            }
+
+            over "LM_039" (
+                active = false
+            )
+            {
+            }
+
+            over "LM_040" (
+                active = false
+            )
+            {
+            }
+
+            over "LM_041" (
+                active = false
+            )
+            {
+            }
+
+            over "LM_042" (
+                active = false
+            )
+            {
+            }
+
+            over "LM_043" (
+                active = false
+            )
+            {
+            }
+
+            over "LM_044" (
+                active = false
+            )
+            {
+            }
+
+            over "LM_045" (
+                active = false
+            )
+            {
+            }
+
+            over "LM_046" (
+                active = false
+            )
+            {
+            }
+
+            over "LM_047" (
+                active = false
+            )
+            {
+            }
+
+            over "LM_048" (
+                active = false
+            )
+            {
+            }
+
+            over "LM_049" (
+                active = false
+            )
+            {
+            }
+
+            over "LM_050" (
+                active = false
+            )
+            {
+            }
+
+            over "LM_051" (
+                active = false
+            )
+            {
+            }
+
+            over "LM_052" (
+                active = false
+            )
+            {
+            }
+
+            over "LM_053" (
+                active = false
+            )
+            {
+            }
+
+            over "LM_054" (
+                active = false
+            )
+            {
+            }
+
+            over "LM_055" (
+                active = false
+            )
+            {
+            }
+
+            over "LM_056" (
+                active = false
+            )
+            {
+            }
+
+            over "LM_057" (
+                active = false
+            )
+            {
+            }
+
+            over "LM_058" (
+                active = false
+            )
+            {
+            }
+
+            over "LM_059" (
+                active = false
+            )
+            {
+            }
+
+            over "LM_060" (
+                active = false
+            )
+            {
+            }
+        }
+
+        over "Geom"
+        {
+            over "Plane" (
+                customData = {
+                    float3 rotationEulerHint = (1.5707963, 0, -1.5707965)
+                }
+            )
+            {
+                quatf xformOp:orient = (1.1920929e-7, -1.490116e-8, 1, 1.04308135e-7)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                def "Light_001" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                    customData = {
+                        float3 rotationEulerHint = (1.5707963, 0, 4.7123885)
+                    }
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_1> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                    quatf xformOp:orient = (1, 5.960465e-8, -2.3841855e-7, 5.9604616e-8)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (0, 0, 0.4912729859352112)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                }
+
+                over "Light_002" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_2> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "Light_003" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_3> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "Light_004" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_4> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "Light_005" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_5> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "Light_006" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_6> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "Light_007" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_7> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "Light_008" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_8> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "Light_009" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_9> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "Light_010" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_10> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "Light_011" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_11> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "Light_012" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_12> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "Light_013" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_13> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "Light_014" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_14> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "Light_015" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_15> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "Light_016" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_16> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "Light_017" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_17> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "Light_018" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_18> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "Light_019" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_19> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "Light_020" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_20> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "Light_021" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_21> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "Light_022" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_22> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "Light_023" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_23> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "Light_024" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_24> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "Light_025" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_25> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "Light_026" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_26> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "Light_027" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_27> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "Light_028" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_28> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "Light_029" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_29> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "Light_030" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_30> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "Light_031" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_31> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "Light_032" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_32> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "Light_033" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_33> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "Light_034" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_34> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "Light_035" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_35> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "Light_036" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_36> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "Light_037" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_37> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "Light_038" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_38> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "Light_039" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_39> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "Light_040" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_40> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "Light_041" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_41> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "Light_042" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_42> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "Light_043" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_43> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "Light_044" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_44> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "Light_045" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_45> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "Light_046" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_46> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "Light_047" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_47> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "Light_048" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_48> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "Light_049" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_49> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "Light_050" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_50> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "Light_051" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_51> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "Light_052" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_52> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "Light_053" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_53> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "Light_054" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_54> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "Light_055" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_55> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "Light_056" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_56> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "Light_057" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_57> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "Light_058" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_58> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "Light_059" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_59> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "Light_060" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </Root/LEDMaterial_60> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                def RealityKitComponent "InputTarget"
+                {
+                    uniform token info:id = "RealityKit.InputTarget"
+                }
+
+                def RealityKitComponent "Collider"
+                {
+                    uint group = 1
+                    uniform token info:id = "RealityKit.Collider"
+                    uint mask = 4294967295
+                    token type = "Default"
+
+                    def RealityKitStruct "Shape"
+                    {
+                        float3 extent = (0.0165, 0.0052808635, 1)
+                        token shapeType = "Box"
+                    }
+                }
+            }
+        }
+    }
+}
+
