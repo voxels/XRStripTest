@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1500"
+   LastUpgradeVersion = "1510"
    version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1ED89CF42A4591A400CC54ED"
-               BuildableName = "XRStripTest.app"
-               BlueprintName = "XRStripTest"
-               ReferencedContainer = "container:XRStripTest.xcodeproj">
+               BuildableName = "XRMapTest.app"
+               BlueprintName = "XRMapTest"
+               ReferencedContainer = "container:XRMapTest.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,19 +28,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
       shouldAutocreateTestPlan = "YES">
-      <Testables>
-         <TestableReference
-            skipped = "NO"
-            parallelizable = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1ED89D082A4591A500CC54ED"
-               BuildableName = "XRStripTestTests.xctest"
-               BlueprintName = "XRStripTestTests"
-               ReferencedContainer = "container:XRStripTest.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-      </Testables>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -57,9 +44,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1ED89CF42A4591A400CC54ED"
-            BuildableName = "XRStripTest.app"
-            BlueprintName = "XRStripTest"
-            ReferencedContainer = "container:XRStripTest.xcodeproj">
+            BuildableName = "XRMapTest.app"
+            BlueprintName = "XRMapTest"
+            ReferencedContainer = "container:XRMapTest.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -74,9 +61,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1ED89CF42A4591A400CC54ED"
-            BuildableName = "XRStripTest.app"
-            BlueprintName = "XRStripTest"
-            ReferencedContainer = "container:XRStripTest.xcodeproj">
+            BuildableName = "XRMapTest.app"
+            BlueprintName = "XRMapTest"
+            ReferencedContainer = "container:XRMapTest.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -6,9 +6,9 @@
 //
 
 import XCTest
-@testable import XRStripTest
+@testable import XRMapTest
 
-class XRStripTestTests: XCTestCase {
+class XRMapTestTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

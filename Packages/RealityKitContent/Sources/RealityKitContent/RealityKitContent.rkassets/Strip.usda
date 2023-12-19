@@ -16,6 +16,7 @@ def Xform "Root"
                 dictionary realitykit = {
                     float2 positionInSubgraph = (-448.02344, 53.585938)
                     float2 sizeInSubgraph = (133, 53)
+                    int stackingOrderInSubgraph = 54
                 }
             }
         )
@@ -24,13 +25,24 @@ def Xform "Root"
                 dictionary realitykit = {
                     float2 positionInSubgraph = (-390.3047, 164.9375)
                     float2 sizeInSubgraph = (165.5, 53)
+                    int stackingOrderInSubgraph = 57
+                }
+            }
+        )
+        float3 inputs:ModelOffset = (0, 0, 0) (
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (-463.89453, 414.27734)
+                    float2 sizeInSubgraph = (145, 53)
+                    int stackingOrderInSubgraph = 63
                 }
             }
         )
         token outputs:mtlx:surface.connect = </Root/LEDMaterial/MaterialXPreviewSurface.outputs:out>
-        token outputs:realitykit:vertex
-        float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (358.25, 99.5)
+        token outputs:realitykit:vertex.connect = </Root/LEDMaterial/GeometryModifier.outputs:out>
+        float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (464.29297, 156.34766)
         float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+        int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 39
 
         def Shader "MaterialXPreviewSurface"
         {
@@ -60,6 +72,20 @@ def Xform "Root"
             int ui:nodegraph:node:stackingOrder = 37
             string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:amount"]
         }
+
+        def Shader "GeometryModifier"
+        {
+            uniform token info:id = "ND_realitykit_geometrymodifier_vertexshader"
+            float3 inputs:bitangent
+            color4f inputs:color
+            float3 inputs:modelPositionOffset.connect = </Root/LEDMaterial.inputs:ModelOffset>
+            float3 inputs:normal
+            token outputs:out
+            float2 ui:nodegraph:node:pos = (-159.28125, 348.72266)
+            float2 ui:nodegraph:node:size = (196.5, 325)
+            int ui:nodegraph:node:stackingOrder = 62
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:modelPositionOffset"]
+        }
     }
 
     def "LEDMaterial_1" (
@@ -82,6 +108,16 @@ def Xform "Root"
                 dictionary realitykit = {
                     float2 positionInSubgraph = (-390.3047, 164.9375)
                     float2 sizeInSubgraph = (165.5, 53)
+                    int stackingOrderInSubgraph = 57
+                }
+            }
+        )
+        float3 inputs:ModelOffset (
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (-463.89453, 414.27734)
+                    float2 sizeInSubgraph = (145, 53)
+                    int stackingOrderInSubgraph = 63
                 }
             }
         )
@@ -563,12 +599,12 @@ def Xform "Root"
     def "Strip" (
         active = true
         customData = {
-            float3 rotationEulerHint = (1.5707963, 0, 1.5707965)
+            float3 rotationEulerHint = (3.141592, 1.5707963, 3.1415925)
         }
         references = @strip.usdz@
     )
     {
-        quatf xformOp:orient = (0.5, 0.49999994, 0.5, 0.50000006)
+        quatf xformOp:orient = (0.70710677, -1.4189486e-7, 0.70710677, 1.1098623e-7)
         float3 xformOp:scale = (1, 1, 1)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 

@@ -1,0 +1,912 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 60;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1E7E5A1F2B2E18DF00671FC9 /* GridSpaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7E5A1E2B2E18DF00671FC9 /* GridSpaceView.swift */; };
+		1EA631282B30A38600A9FA58 /* FFTModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA631272B30A38600A9FA58 /* FFTModel.swift */; };
+		1EA6312F2B30A3CB00A9FA58 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EA6312E2B30A3CB00A9FA58 /* Accelerate.framework */; };
+		1EA631322B30A7F700A9FA58 /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1EA631312B30A7F700A9FA58 /* AudioKit */; };
+		1EA631362B30AE6E00A9FA58 /* AudioEngineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA631352B30AE6E00A9FA58 /* AudioEngineModel.swift */; };
+		1EA631392B30B30300A9FA58 /* shadowDancing.aif in Resources */ = {isa = PBXBuildFile; fileRef = 1EA631372B30B2CE00A9FA58 /* shadowDancing.aif */; };
+		1EA6313C2B30B5C400A9FA58 /* AudioKitEX in Frameworks */ = {isa = PBXBuildFile; productRef = 1EA6313B2B30B5C400A9FA58 /* AudioKitEX */; };
+		1EBC27112B1DEC2A00ACB23C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EBC27102B1DEC2A00ACB23C /* Assets.xcassets */; };
+		1EBC272B2B1DED9D00ACB23C /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBC27242B1DED9D00ACB23C /* NavigationView.swift */; };
+		1EBC272C2B1DED9D00ACB23C /* HSVAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBC27252B1DED9D00ACB23C /* HSVAnimation.swift */; };
+		1EBC272D2B1DED9D00ACB23C /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBC27262B1DED9D00ACB23C /* MainMenuView.swift */; };
+		1EBC272E2B1DED9D00ACB23C /* StripSpaceMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBC27272B1DED9D00ACB23C /* StripSpaceMenu.swift */; };
+		1EBC272F2B1DED9D00ACB23C /* StripSpaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBC27282B1DED9D00ACB23C /* StripSpaceView.swift */; };
+		1EBC27302B1DED9D00ACB23C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBC27292B1DED9D00ACB23C /* ContentView.swift */; };
+		1EBC27312B1DED9D00ACB23C /* XRMapTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBC272A2B1DED9D00ACB23C /* XRMapTestApp.swift */; };
+		1ED89CFB2A4591A400CC54ED /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 1ED89CFA2A4591A400CC54ED /* RealityKitContent */; };
+		1ED89D0E2A4591A500CC54ED /* XRMapTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED89D0D2A4591A500CC54ED /* XRMapTestTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1E6F4A842B20F307001E701B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1ED89CED2A4591A400CC54ED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E6F4A6F2B20F305001E701B;
+			remoteInfo = "Know Maps";
+		};
+		1E6F4A8E2B20F307001E701B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1ED89CED2A4591A400CC54ED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E6F4A6F2B20F305001E701B;
+			remoteInfo = "Know Maps";
+		};
+		1ED89D0A2A4591A500CC54ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1ED89CED2A4591A400CC54ED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1ED89CF42A4591A400CC54ED;
+			remoteInfo = XRStripTest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1E6F4A702B20F305001E701B /* Know Maps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Know Maps.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E6F4A832B20F307001E701B /* Know MapsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Know MapsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E6F4A8D2B20F307001E701B /* Know MapsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Know MapsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E7E5A1E2B2E18DF00671FC9 /* GridSpaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridSpaceView.swift; sourceTree = "<group>"; };
+		1EA631272B30A38600A9FA58 /* FFTModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFTModel.swift; sourceTree = "<group>"; };
+		1EA6312A2B30A3BE00A9FA58 /* AudioKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = AudioKit; path = "/Users/voxels/Library/Developer/Xcode/DerivedData/XRMapTest-aeixyxhtzsmdzdaswxibergriymw/SourcePackages/checkouts/AudioKit"; sourceTree = "<absolute>"; };
+		1EA6312E2B30A3CB00A9FA58 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		1EA631352B30AE6E00A9FA58 /* AudioEngineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioEngineModel.swift; sourceTree = "<group>"; };
+		1EA631372B30B2CE00A9FA58 /* shadowDancing.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = shadowDancing.aif; sourceTree = "<group>"; };
+		1EBC270C2B1DE9DF00ACB23C /* XRMapTest */ = {isa = PBXFileReference; lastKnownFileType = folder; path = XRMapTest; sourceTree = "<group>"; };
+		1EBC27102B1DEC2A00ACB23C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = XRMapTest/Assets.xcassets; sourceTree = "<group>"; };
+		1EBC27242B1DED9D00ACB23C /* NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NavigationView.swift; path = XRMapTest/View/NavigationView.swift; sourceTree = "<group>"; };
+		1EBC27252B1DED9D00ACB23C /* HSVAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HSVAnimation.swift; path = XRMapTest/Model/HSVAnimation.swift; sourceTree = "<group>"; };
+		1EBC27262B1DED9D00ACB23C /* MainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainMenuView.swift; path = XRMapTest/View/MainMenuView.swift; sourceTree = "<group>"; };
+		1EBC27272B1DED9D00ACB23C /* StripSpaceMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StripSpaceMenu.swift; path = XRMapTest/View/StripSpaceMenu.swift; sourceTree = "<group>"; };
+		1EBC27282B1DED9D00ACB23C /* StripSpaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StripSpaceView.swift; path = XRMapTest/View/StripSpaceView.swift; sourceTree = "<group>"; };
+		1EBC27292B1DED9D00ACB23C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = XRMapTest/View/ContentView.swift; sourceTree = "<group>"; };
+		1EBC272A2B1DED9D00ACB23C /* XRMapTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = XRMapTestApp.swift; path = XRMapTest/XRMapTestApp.swift; sourceTree = "<group>"; };
+		1ED89CF52A4591A400CC54ED /* XRMapTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XRMapTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1ED89CF92A4591A400CC54ED /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
+		1ED89D092A4591A500CC54ED /* XRMapTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XRMapTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1ED89D0D2A4591A500CC54ED /* XRMapTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XRMapTestTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1E6F4A6D2B20F305001E701B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E6F4A802B20F307001E701B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E6F4A8A2B20F307001E701B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1ED89CF22A4591A400CC54ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EA631322B30A7F700A9FA58 /* AudioKit in Frameworks */,
+				1EA6313C2B30B5C400A9FA58 /* AudioKitEX in Frameworks */,
+				1EA6312F2B30A3CB00A9FA58 /* Accelerate.framework in Frameworks */,
+				1ED89CFB2A4591A400CC54ED /* RealityKitContent in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1ED89D062A4591A500CC54ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1EA631292B30A3BE00A9FA58 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1EA6312E2B30A3CB00A9FA58 /* Accelerate.framework */,
+				1EA6312A2B30A3BE00A9FA58 /* AudioKit */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1ED89CEC2A4591A400CC54ED = {
+			isa = PBXGroup;
+			children = (
+				1EBC27292B1DED9D00ACB23C /* ContentView.swift */,
+				1E7E5A1E2B2E18DF00671FC9 /* GridSpaceView.swift */,
+				1EBC27252B1DED9D00ACB23C /* HSVAnimation.swift */,
+				1EBC27262B1DED9D00ACB23C /* MainMenuView.swift */,
+				1EBC27242B1DED9D00ACB23C /* NavigationView.swift */,
+				1EBC27272B1DED9D00ACB23C /* StripSpaceMenu.swift */,
+				1EBC27282B1DED9D00ACB23C /* StripSpaceView.swift */,
+				1EBC272A2B1DED9D00ACB23C /* XRMapTestApp.swift */,
+				1EA631352B30AE6E00A9FA58 /* AudioEngineModel.swift */,
+				1EA631272B30A38600A9FA58 /* FFTModel.swift */,
+				1EA631372B30B2CE00A9FA58 /* shadowDancing.aif */,
+				1EBC27102B1DEC2A00ACB23C /* Assets.xcassets */,
+				1EBC270C2B1DE9DF00ACB23C /* XRMapTest */,
+				1ED89CF82A4591A400CC54ED /* Packages */,
+				1ED89D0C2A4591A500CC54ED /* XRMapTestTests */,
+				1ED89CF62A4591A400CC54ED /* Products */,
+				1EA631292B30A3BE00A9FA58 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1ED89CF62A4591A400CC54ED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1ED89CF52A4591A400CC54ED /* XRMapTest.app */,
+				1ED89D092A4591A500CC54ED /* XRMapTestTests.xctest */,
+				1E6F4A702B20F305001E701B /* Know Maps.app */,
+				1E6F4A832B20F307001E701B /* Know MapsTests.xctest */,
+				1E6F4A8D2B20F307001E701B /* Know MapsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1ED89CF82A4591A400CC54ED /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				1ED89CF92A4591A400CC54ED /* RealityKitContent */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
+		1ED89D0C2A4591A500CC54ED /* XRMapTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				1ED89D0D2A4591A500CC54ED /* XRMapTestTests.swift */,
+			);
+			path = XRMapTestTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1E6F4A6F2B20F305001E701B /* Know Maps */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E6F4A9B2B20F307001E701B /* Build configuration list for PBXNativeTarget "Know Maps" */;
+			buildPhases = (
+				1E6F4A6C2B20F305001E701B /* Sources */,
+				1E6F4A6D2B20F305001E701B /* Frameworks */,
+				1E6F4A6E2B20F305001E701B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Know Maps";
+			productName = "Know Maps";
+			productReference = 1E6F4A702B20F305001E701B /* Know Maps.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1E6F4A822B20F307001E701B /* Know MapsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E6F4A9C2B20F307001E701B /* Build configuration list for PBXNativeTarget "Know MapsTests" */;
+			buildPhases = (
+				1E6F4A7F2B20F307001E701B /* Sources */,
+				1E6F4A802B20F307001E701B /* Frameworks */,
+				1E6F4A812B20F307001E701B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1E6F4A852B20F307001E701B /* PBXTargetDependency */,
+			);
+			name = "Know MapsTests";
+			productName = "Know MapsTests";
+			productReference = 1E6F4A832B20F307001E701B /* Know MapsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1E6F4A8C2B20F307001E701B /* Know MapsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E6F4A9D2B20F307001E701B /* Build configuration list for PBXNativeTarget "Know MapsUITests" */;
+			buildPhases = (
+				1E6F4A892B20F307001E701B /* Sources */,
+				1E6F4A8A2B20F307001E701B /* Frameworks */,
+				1E6F4A8B2B20F307001E701B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1E6F4A8F2B20F307001E701B /* PBXTargetDependency */,
+			);
+			name = "Know MapsUITests";
+			productName = "Know MapsUITests";
+			productReference = 1E6F4A8D2B20F307001E701B /* Know MapsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		1ED89CF42A4591A400CC54ED /* XRMapTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1ED89D112A4591A500CC54ED /* Build configuration list for PBXNativeTarget "XRMapTest" */;
+			buildPhases = (
+				1ED89CF12A4591A400CC54ED /* Sources */,
+				1ED89CF22A4591A400CC54ED /* Frameworks */,
+				1ED89CF32A4591A400CC54ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XRMapTest;
+			packageProductDependencies = (
+				1ED89CFA2A4591A400CC54ED /* RealityKitContent */,
+				1EA631312B30A7F700A9FA58 /* AudioKit */,
+				1EA6313B2B30B5C400A9FA58 /* AudioKitEX */,
+			);
+			productName = XRStripTest;
+			productReference = 1ED89CF52A4591A400CC54ED /* XRMapTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1ED89D082A4591A500CC54ED /* XRMapTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1ED89D142A4591A500CC54ED /* Build configuration list for PBXNativeTarget "XRMapTestTests" */;
+			buildPhases = (
+				1ED89D052A4591A500CC54ED /* Sources */,
+				1ED89D062A4591A500CC54ED /* Frameworks */,
+				1ED89D072A4591A500CC54ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1ED89D0B2A4591A500CC54ED /* PBXTargetDependency */,
+			);
+			name = XRMapTestTests;
+			productName = XRStripTestTests;
+			productReference = 1ED89D092A4591A500CC54ED /* XRMapTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1ED89CED2A4591A400CC54ED /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1510;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					1E6F4A6F2B20F305001E701B = {
+						CreatedOnToolsVersion = 15.1;
+					};
+					1E6F4A822B20F307001E701B = {
+						CreatedOnToolsVersion = 15.1;
+						TestTargetID = 1E6F4A6F2B20F305001E701B;
+					};
+					1E6F4A8C2B20F307001E701B = {
+						CreatedOnToolsVersion = 15.1;
+						TestTargetID = 1E6F4A6F2B20F305001E701B;
+					};
+					1ED89CF42A4591A400CC54ED = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					1ED89D082A4591A500CC54ED = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 1ED89CF42A4591A400CC54ED;
+					};
+				};
+			};
+			buildConfigurationList = 1ED89CF02A4591A400CC54ED /* Build configuration list for PBXProject "XRMapTest" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1ED89CEC2A4591A400CC54ED;
+			packageReferences = (
+				1EA631302B30A5BB00A9FA58 /* XCLocalSwiftPackageReference "../AudioKit" */,
+				1EA6313A2B30B5C400A9FA58 /* XCRemoteSwiftPackageReference "AudioKitEX" */,
+			);
+			productRefGroup = 1ED89CF62A4591A400CC54ED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1ED89CF42A4591A400CC54ED /* XRMapTest */,
+				1ED89D082A4591A500CC54ED /* XRMapTestTests */,
+				1E6F4A6F2B20F305001E701B /* Know Maps */,
+				1E6F4A822B20F307001E701B /* Know MapsTests */,
+				1E6F4A8C2B20F307001E701B /* Know MapsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1E6F4A6E2B20F305001E701B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E6F4A812B20F307001E701B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E6F4A8B2B20F307001E701B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1ED89CF32A4591A400CC54ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EA631392B30B30300A9FA58 /* shadowDancing.aif in Resources */,
+				1EBC27112B1DEC2A00ACB23C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1ED89D072A4591A500CC54ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1E6F4A6C2B20F305001E701B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E6F4A7F2B20F307001E701B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E6F4A892B20F307001E701B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1ED89CF12A4591A400CC54ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EBC272B2B1DED9D00ACB23C /* NavigationView.swift in Sources */,
+				1EBC272C2B1DED9D00ACB23C /* HSVAnimation.swift in Sources */,
+				1EBC272D2B1DED9D00ACB23C /* MainMenuView.swift in Sources */,
+				1E7E5A1F2B2E18DF00671FC9 /* GridSpaceView.swift in Sources */,
+				1EBC272E2B1DED9D00ACB23C /* StripSpaceMenu.swift in Sources */,
+				1EA631362B30AE6E00A9FA58 /* AudioEngineModel.swift in Sources */,
+				1EBC272F2B1DED9D00ACB23C /* StripSpaceView.swift in Sources */,
+				1EBC27302B1DED9D00ACB23C /* ContentView.swift in Sources */,
+				1EA631282B30A38600A9FA58 /* FFTModel.swift in Sources */,
+				1EBC27312B1DED9D00ACB23C /* XRMapTestApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1ED89D052A4591A500CC54ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1ED89D0E2A4591A500CC54ED /* XRMapTestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1E6F4A852B20F307001E701B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E6F4A6F2B20F305001E701B /* Know Maps */;
+			targetProxy = 1E6F4A842B20F307001E701B /* PBXContainerItemProxy */;
+		};
+		1E6F4A8F2B20F307001E701B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E6F4A6F2B20F305001E701B /* Know Maps */;
+			targetProxy = 1E6F4A8E2B20F307001E701B /* PBXContainerItemProxy */;
+		};
+		1ED89D0B2A4591A500CC54ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1ED89CF42A4591A400CC54ED /* XRMapTest */;
+			targetProxy = 1ED89D0A2A4591A500CC54ED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1E6F4A952B20F307001E701B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Know Maps/Know_Maps.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Know Maps/Preview Content\"";
+				DEVELOPMENT_TEAM = FTMC23LTVL;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Know Maps/Info.plist";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.noisederived.Know-Maps";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1E6F4A962B20F307001E701B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Know Maps/Know_Maps.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Know Maps/Preview Content\"";
+				DEVELOPMENT_TEAM = FTMC23LTVL;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Know Maps/Info.plist";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.noisederived.Know-Maps";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1E6F4A972B20F307001E701B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FTMC23LTVL;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.noisederived.Know-MapsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Know Maps.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Know Maps";
+			};
+			name = Debug;
+		};
+		1E6F4A982B20F307001E701B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FTMC23LTVL;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.noisederived.Know-MapsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Know Maps.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Know Maps";
+			};
+			name = Release;
+		};
+		1E6F4A992B20F307001E701B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FTMC23LTVL;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.noisederived.Know-MapsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Know Maps";
+			};
+			name = Debug;
+		};
+		1E6F4A9A2B20F307001E701B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FTMC23LTVL;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.noisederived.Know-MapsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Know Maps";
+			};
+			name = Release;
+		};
+		1ED89D0F2A4591A500CC54ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = xros;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				XROS_DEPLOYMENT_TARGET = 1.0;
+			};
+			name = Debug;
+		};
+		1ED89D102A4591A500CC54ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = xros;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+				XROS_DEPLOYMENT_TARGET = 1.0;
+			};
+			name = Release;
+		};
+		1ED89D122A4591A500CC54ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"XRMapTest/Preview Content\"";
+				DEVELOPMENT_TEAM = FTMC23LTVL;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.noisederived.XRMapTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+			};
+			name = Debug;
+		};
+		1ED89D132A4591A500CC54ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"XRMapTest/Preview Content\"";
+				DEVELOPMENT_TEAM = FTMC23LTVL;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.noisederived.XRMapTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+			};
+			name = Release;
+		};
+		1ED89D152A4591A500CC54ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FTMC23LTVL;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.noisederived.XRMapTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XRMapTest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/XRMapTest";
+				XROS_DEPLOYMENT_TARGET = 1.0;
+			};
+			name = Debug;
+		};
+		1ED89D162A4591A500CC54ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FTMC23LTVL;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.noisederived.XRMapTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XRMapTest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/XRMapTest";
+				XROS_DEPLOYMENT_TARGET = 1.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1E6F4A9B2B20F307001E701B /* Build configuration list for PBXNativeTarget "Know Maps" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E6F4A952B20F307001E701B /* Debug */,
+				1E6F4A962B20F307001E701B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E6F4A9C2B20F307001E701B /* Build configuration list for PBXNativeTarget "Know MapsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E6F4A972B20F307001E701B /* Debug */,
+				1E6F4A982B20F307001E701B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E6F4A9D2B20F307001E701B /* Build configuration list for PBXNativeTarget "Know MapsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E6F4A992B20F307001E701B /* Debug */,
+				1E6F4A9A2B20F307001E701B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1ED89CF02A4591A400CC54ED /* Build configuration list for PBXProject "XRMapTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1ED89D0F2A4591A500CC54ED /* Debug */,
+				1ED89D102A4591A500CC54ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1ED89D112A4591A500CC54ED /* Build configuration list for PBXNativeTarget "XRMapTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1ED89D122A4591A500CC54ED /* Debug */,
+				1ED89D132A4591A500CC54ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1ED89D142A4591A500CC54ED /* Build configuration list for PBXNativeTarget "XRMapTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1ED89D152A4591A500CC54ED /* Debug */,
+				1ED89D162A4591A500CC54ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		1EA631302B30A5BB00A9FA58 /* XCLocalSwiftPackageReference "../AudioKit" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../AudioKit;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1EA6313A2B30B5C400A9FA58 /* XCRemoteSwiftPackageReference "AudioKitEX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/AudioKitEX.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1EA631312B30A7F700A9FA58 /* AudioKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AudioKit;
+		};
+		1EA6313B2B30B5C400A9FA58 /* AudioKitEX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1EA6313A2B30B5C400A9FA58 /* XCRemoteSwiftPackageReference "AudioKitEX" */;
+			productName = AudioKitEX;
+		};
+		1ED89CFA2A4591A400CC54ED /* RealityKitContent */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RealityKitContent;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 1ED89CED2A4591A400CC54ED /* Project object */;
+}

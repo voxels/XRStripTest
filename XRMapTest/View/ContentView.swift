@@ -13,7 +13,7 @@ struct ContentView: View {
     @Binding var isSpaceHidden:Bool
     var body: some View {
         if isSpaceHidden {
-            MainMenuView(isSpaceHidden: $isSpaceHidden)
+            NavigationView(isSpaceHidden: $isSpaceHidden)
         } else {
             StripSpaceMenu(isSpaceHidden: $isSpaceHidden)
         }
