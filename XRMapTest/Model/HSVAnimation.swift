@@ -32,6 +32,7 @@ class HSVAnimation : ObservableObject {
     var brightnessAnimationStartTime = [[[CFTimeInterval]]]()
     private var frameTimeInterval:Double = 1.0/60.0
     var offsetRandomness:[[[Double]]] = [[[Double]]]()
+    var lastOffsetRandomness:[[[Double]]] = [[[Double]]]()
     var lastOffsetReset:Double = 0
     var lightLayerCount:Int
     var stripCount:Int
@@ -61,10 +62,57 @@ class HSVAnimation : ObservableObject {
         self.gridCount = numGrids
         self.lightOffset = Array(repeating:Array(repeating: Array(repeating: Array(repeating:SIMD3(0.0, 0.0, 0.0), count: layerCount), count:lightCount), count:stripCount), count:numGrids)
         
-        resetOffset(lightCount: lightCount, stripCount: stripCount, gridCount:numGrids)
-        
+        resetOffset(lightCount: lightCount, stripCount: stripCount, gridCount: gridCount)
+        lastOffsetRandomness = offsetRandomness
         createDisplayLink()
         
+    }
+    
+    public func resetOffset(with amplitudes:[Float?], lightCount:Int, stripCount:Int, gridCount:Int) {
+        guard amplitudes.count > gridCount * 60 + lightCount else {
+            return
+        }
+        
+        lastOffsetRandomness = offsetRandomness
+        offsetRandomness.removeAll(keepingCapacity:true)
+        for gridIndex in 0..<gridCount {
+            var gridRandomness = [[Double]]()
+            for stripIndex in 0..<stripCount {
+                var values = [Double]()
+                for lightIndex in 0..<lightCount {
+                    if stripIndex == 0 {
+                        let thisValue = Double(amplitudes[gridIndex * lightCount + lightIndex]!)
+                        values.append(thisValue)
+                    } else {
+                        let thisValue = Double(lastOffsetRandomness[gridIndex][stripIndex-1][lightIndex])
+                        values.append(thisValue)
+                    }
+                }
+                gridRandomness.append(values)
+            }
+            if offsetRandomness.count == gridCount {
+                offsetRandomness[gridIndex] = gridRandomness
+            } else {
+                offsetRandomness.append(gridRandomness)
+            }
+        }
+
+        
+        Task { @MainActor in
+            var newLightOffset:[[[[SIMD3<Float>]]]] = Array(repeating:Array(repeating: Array(repeating: Array(repeating:SIMD3(0.0, 0.0, 0.0), count: lightLayerCount), count:lightCount), count:stripCount), count:gridCount)
+            
+            for gridIndex in 0..<self.gridCount {
+                for stripIndex in 0..<self.stripCount {
+                    for lightIndex in 0..<self.lightCount {
+                        for layerIndex in 0..<self.lightLayerCount {
+                            newLightOffset[gridIndex][stripIndex][lightIndex][layerIndex].y = Float(offsetRandomness[gridIndex][stripIndex][lightIndex])
+                        }
+                    }
+                }
+            }
+    
+            self.lightOffset = newLightOffset
+        }
     }
     
     public func resetOffset(lightCount:Int, stripCount:Int, gridCount:Int) {
@@ -97,7 +145,7 @@ class HSVAnimation : ObservableObject {
             if target < 0 {
                 newTarget = 0
             } else {
-                newTarget = target * 2
+                newTarget = target
             }
             
             
@@ -108,14 +156,11 @@ class HSVAnimation : ObservableObject {
     }
     
     public func setSaturation(to target:Float, for stripIndex:Int, lightIndex:Int, gridIndex:Int) throws {
-        if target > 1 {
-            throw HSVAnimationError.RequiresNormalizedValue
-        }
-            var newTarget = target
+            var newTarget = min(1,target)
             if target < 0 {
                 newTarget = 0
             } else {
-                newTarget = target * 2
+                newTarget = target
             }
             
             targetSaturation[gridIndex][stripIndex][lightIndex] = newTarget
@@ -124,11 +169,9 @@ class HSVAnimation : ObservableObject {
     }
     
     public func setBrightness(to target: Float, for stripIndex:Int, lightIndex:Int, gridIndex:Int) throws {
-        if target > 1 {
-            throw HSVAnimationError.RequiresNormalizedValue
-        }
+
         
-            var newTarget = target
+        var newTarget = min(1,target)
             if target < 0 {
                 newTarget = 0
             }
@@ -275,10 +318,6 @@ extension HSVAnimation {
 extension HSVAnimation {
     private func calculateHSV(link:CADisplayLink)async ->[[[[SIMD3<Float>]]]] {
         
-        let timestampOffset:Double = displayLinkTimestamp * Double.pi / 6
-        
-        let sinOffset = sin(timestampOffset) - 1
-        let cosOffset = sin(-timestampOffset) + 1
         let oldHsv = self.hsv
         let offsetRandomness = self.offsetRandomness
         let hue = self.originHue
@@ -290,6 +329,10 @@ extension HSVAnimation {
         let targetHueDuration = self.targetHueDuration
         let targetSaturationDuration = self.targetSaturationDuration
         let targetBrightnessDuration = self.targetBrightnessDuration
+        
+        guard offsetRandomness.count == gridCount else {
+            return oldHsv
+        }
 
         let nextHsv = await withTaskGroup(of: (Int, Int, Int, Int, SIMD3<Float>).self, returning: [[[[SIMD3<Float>]]]].self, body: { taskGroup in
             var newHsv:[[[[SIMD3<Float>]]]] = Array(repeating:Array(repeating:Array(repeating: Array(repeating:SIMD3(0.0, 0.0, 1.0), count: lightLayerCount), count: lightCount), count:stripCount), count:gridCount)
@@ -304,24 +347,6 @@ extension HSVAnimation {
                             newOriginHue[gridIndex][stripIndex][lightIndex] = oldHsv[gridIndex][stripIndex][lightIndex][layerIndex].x
                             newOriginSaturation[gridIndex][stripIndex][lightIndex] = oldHsv[gridIndex][stripIndex][lightIndex][layerIndex].y
                             newOriginBrightness[gridIndex][stripIndex][lightIndex] = oldHsv[gridIndex][stripIndex][lightIndex][layerIndex].z
-                            
-                            Task { @MainActor in
-                                var minValue:Double = 0
-                                if offsetRandomness[gridIndex][stripIndex][lightIndex] < minValue {
-                                    minValue = offsetRandomness[gridIndex][stripIndex][lightIndex]
-                                }
-                                
-                                var maxValue:Double = 0
-                                if offsetRandomness[gridIndex][stripIndex][lightIndex] > maxValue {
-                                    maxValue = offsetRandomness[gridIndex][stripIndex][lightIndex]
-                                }
-                                
-                                if maxValue > 0 {
-                                    lightOffset[gridIndex][stripIndex][lightIndex][layerIndex].y = Float(min(Double(cosOffset),maxValue))
-                                } else {
-                                    lightOffset[gridIndex][stripIndex][lightIndex][layerIndex].y = Float(max(minValue, Double(sinOffset)))
-                                }
-                            }
                             
                             taskGroup.addTask { [self] in
                                 
@@ -342,14 +367,10 @@ extension HSVAnimation {
             self.originHue =  newOriginHue
             self.originSaturation =  newOriginSaturation
             self.originBrightness =  newOriginBrightness
-            
+                        
             return newHsv
         })
         
-        if cosOffset <= 0.01 {
-            resetOffset(lightCount:lightCount, stripCount: stripCount, gridCount: gridCount)
-        }
-
         return nextHsv
     }
 }
@@ -366,16 +387,14 @@ extension HSVAnimation {
 extension HSVAnimation {
     
     @objc func onFrame(link:CADisplayLink) {
-        guard hsv.count == gridCount, hsv[0].count == stripCount, hsv[0][0].count == lightCount, hsv[0][0][0].count == lightLayerCount, offsetRandomness.count == gridCount else {
-            displayLinkTimestamp = link.timestamp
-                        
-            resetOffset(lightCount:lightCount, stripCount: stripCount, gridCount: gridCount)
-
+        guard link.timestamp > lastEffectiveTimestamp + frameTimeInterval else {
             return
         }
-        
-        Task { @MainActor in
-            await hsv = calculateHSV(link: link)
+        Task {
+            let newHSV = await calculateHSV(link: link)
+            Task { @MainActor in
+                self.hsv = newHSV
+            }
         }
         
         displayLinkTimestamp = link.timestamp

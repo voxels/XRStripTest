@@ -7,7 +7,6 @@ import SwiftUI
 open class FFTModel: ObservableObject {
     @Published public var amplitudes: [Float?] = Array(repeating: nil, count: 50)
     public var nodeTap: FFTTap!
-    public var numberOfBars: Int = 50
     public var defaultMaxAmplitude: Float = 0.0
     public var defaultMinAmplitude: Float = -70.0
     public var referenceValueForFFT: Float = 12.0
@@ -20,7 +19,7 @@ open class FFTModel: ObservableObject {
     private var fftValidBinCount: FFTValidBinCount?
     private var minAmplitude: Float
     private var maxAmplitude: Float
-    private let defaultBarCount: Int = 64
+    private let defaultBarCount: Int = 8
     private let maxBarCount: Int = 128
     private var backgroundColor: Color
 
@@ -75,6 +74,13 @@ open class FFTModel: ObservableObject {
             }
             nodeTap.isNormalized = false
             nodeTap.start()
+        } else {
+            nodeTap = FFTTap(node, fftValidBinCount: fftValidBinCount, callbackQueue: .main) { fftData in
+                self.updateAmplitudes(fftData)
+            }
+            nodeTap.isNormalized = false
+            nodeTap.start()
+
         }
     }
 
@@ -103,9 +109,7 @@ open class FFTModel: ObservableObject {
         vDSP_vclip(decibels, 1, &zero, &one, &decibels, 1, vDSP_Length(decibels.count))
 
         // swap the amplitude array
-        DispatchQueue.main.async {
-            self.amplitudes = decibels
-        }
+        self.amplitudes = decibels
     }
 
     func mockAudioInput() {
@@ -120,7 +124,7 @@ open class FFTModel: ObservableObject {
         }
     }
     
-    func onAppear() {
+    func onAppear(node:Node) {
         
         updateNode(node, fftValidBinCount: self.fftValidBinCount)
         maxAmplitude = self.defaultMaxAmplitude
