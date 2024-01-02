@@ -17,7 +17,7 @@ struct GridSpaceView: View {
     @State private var mapEntities:[Entity] = [Entity]()
     static let audioEngineModel = AudioEngineModel()
     @StateObject private var audioModel = FFTModel(GridSpaceView.audioEngineModel.player)
-    static let numGrids:Int = 3
+    static let numGrids:Int = 2
     static let stripLightCount:Int = 60
     static let stripCount:Int = 10
     static let stripLightLayerCount = 3
